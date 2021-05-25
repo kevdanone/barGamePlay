@@ -1,26 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import videoTyping from '../../video/Typing_dark.mov';
 import styled from 'styled-components'
+import logo from '../../img/logo.png'
+import { primaryColor } from '../../styles/variables'
 
-const Video = styled.video`
-position: absolute;
-top:0;
-right:0;
-left:0;
-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-`
+
 const Nav = styled.nav`
+  z-index:10;
   width: 100%;
   padding: 0 0 2em 0;
   position: fixed;
   display:flex;
-  justify-content:space-around;
+  justify-content: center;
   background-color: rgba(0,0,0,.4);
   
 `
 const LinkItem = styled(NavLink)`
   padding: 2em 0 0 0;
+  margin: 0 2em;
   text-decoration:none;
   color: white;
   font-weight: bold;
@@ -30,7 +27,7 @@ const LinkItem = styled(NavLink)`
     display: block;
     width: 0;
     height: 2px;
-    background: green;
+    background: ${primaryColor};
     transition: width .3s;
   }
   &:hover:after {
@@ -38,52 +35,59 @@ const LinkItem = styled(NavLink)`
   }
   
   &.active {
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid ${primaryColor};
   }
 `;
+const Logo = styled.img`
+height: 75px;
+width: 75px;
+margin: -2em;
+`
 
 const Header = () => (
   <header>
-  <Video autoPlay muted loop>
-    <source src={videoTyping} type="video/mp4" />
-  </Video>
   <Nav>
     <LinkItem
       exact
       to='/'
       >
-      accueil
+      Accueil
     </LinkItem>
     <LinkItem
       exact
       to='/test'
       >
-      qui somme nous
+      Qui somme nous
     </LinkItem>
     <LinkItem
       exact
       to='/test2'
       >
-      galerie
+      Galerie
+    </LinkItem>
+    <LinkItem
+      to='/'
+      >
+      <Logo src={logo} alt="logo GamePlay"/>
     </LinkItem>
     <LinkItem
       exact
       to='/test3'
       >
-      quoi de neuf
+      Quoi de neuf
     </LinkItem>
 
     <LinkItem
       exact
       to='/test4'
       >
-      reservation
+      Reservations
     </LinkItem>
     <LinkItem
       exact
       to='/test5'
       >
-      blabla
+      Tournois
     </LinkItem>
   </Nav>
 </header>
