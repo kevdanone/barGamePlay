@@ -12,7 +12,7 @@ const Nav = styled.nav`
   position: fixed;
   display:flex;
   justify-content: center;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0,0,0,.7);
   
 `
 const LinkItem = styled(NavLink)`
