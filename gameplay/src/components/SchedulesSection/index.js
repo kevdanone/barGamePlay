@@ -2,7 +2,7 @@
 import React from "react"
 import styled from "styled-components"
 import backimg from "../../img/purplegaming.jpg"
-import { bgColor, textColor, lightColor,darkColor } from "../../styles/variables"
+import { bgColor, textColor,darkColor } from "../../styles/variables"
 
 const Schedules = styled.section`
 	height: 120vh;

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
 import styled from "styled-components"
-import { lightColor,bgLightColor,tertiaryColor, textColor } from "../../styles/variables"
+import { primaryColor,textColor } from "../../styles/variables"
 import picture01 from "../../img/peinture.png"
 import picture02 from "../../img/peinture.png"
 import picture03 from "../../img/peinture.png"
@@ -46,12 +46,11 @@ const Title = styled.h2`
     width:100%;
 	color: ${textColor};
 
-    text-shadow: 0px 0px 13px #23d804;
-	//text-shadow: #3de949 1px 0 10px;
+    text-shadow: 0px 0px 13px ${primaryColor};
 `
 const SubTitle = styled.h3`
     color: ${textColor};
-    text-shadow: 0px 0px 13px #23d804;
+    text-shadow: 0px 0px 13px ${primaryColor};
 
     font-size: 2em;
     padding: 1em 0;
