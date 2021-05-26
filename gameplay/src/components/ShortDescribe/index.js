@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
 import styled from "styled-components"
-import { primaryColor, textColor } from "../../styles/variables"
+import { lightColor,bgLightColor,tertiaryColor, textColor } from "../../styles/variables"
 import picture01 from "../../img/peinture.png"
 import picture02 from "../../img/peinture.png"
 import picture03 from "../../img/peinture.png"
@@ -11,15 +11,19 @@ const DescribeSection = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 8rem 0;
     width: 80vw;
+
 `
 const LeftSide = styled.div`
-    flex-basis: 50%;
+    flex-basis: 40%;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 const RightSide = styled.div`
-    flex-basis: 50%;
+    flex-basis: 40%;
 `
 const Picture = styled.img`
 	height: 260px;
@@ -40,7 +44,6 @@ const Title = styled.h2`
 	text-transform: uppercase;
     font-size: 4em;
     width:100%;
-    padding-top: 0.5em;
 	color: ${textColor};
 
     text-shadow: 0px 0px 13px #23d804;
@@ -55,10 +58,10 @@ const SubTitle = styled.h3`
 `
 const Text = styled.p`
     color: ${textColor};
-    font-size:1.5em;
+    font-size:1.2em;
     padding-bottom: 0.5em;
-    line-height: 1.5em;
-    letter-spacing: .015em;
+    line-height: 1.2em;
+    letter-spacing: .017em;
 `
 
 const ShortDescribe = () => {
@@ -69,9 +72,8 @@ const ShortDescribe = () => {
 		<LeftSide>
 			<Title>GamePlay</Title>
             <SubTitle>Le bar Geek n°1 à Vesoul </SubTitle>
-			<Text>
-				Le GamePlay est un bar Geek, des bornes d'arcades jusqu'au consoles nextGen, des Pc ainsi que des jeux de société. Ouvert tout les jours de la semaine.
-            </Text>
+			<Text>Le GamePlay est un bar Geek, des bornes d'arcades jusqu'au consoles nextGen,des Pc ainsi que des jeux de société.</Text>
+            <Text> Ouvert tout les jours de la semaine.</Text>
             <Text>Le GamePlay, 6 Rue des Bains, 70000 Vesoul</Text>
 		</LeftSide>
 		<RightSide>

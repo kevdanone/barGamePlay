@@ -3,10 +3,11 @@ import styled from "styled-components"
 import videoTyping from "../../video/Typing_dark.mov"
 import SchedulesSection from "../SchedulesSection"
 import ShortDescribe from "../ShortDescribe"
-import { opacityOverlay, textColor } from "../../styles/variables"
+import HomeInfo from "../HomeInfo"
+import { bgColor,primaryColor,opacityOverlay, textColor } from "../../styles/variables"
 
 const Main = styled.main`
-	background-color: #000;
+	background-color: ${bgColor};
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -45,7 +46,7 @@ const MainTitle = styled.h1`
 	color: ${textColor};
 	display: flex;
 	align-items: center;
-    text-shadow: 0px 0px 13px #23d804;
+    text-shadow: 0px 0px 13px ${primaryColor};
 
 	&::before,
 	::after {
@@ -77,7 +78,7 @@ const Home = () => (
 
 		<ShortDescribe />
 		<SchedulesSection />
-		<ShortDescribe />
+		<HomeInfo />
 	</Main>
 )
 

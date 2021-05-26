@@ -81,7 +81,7 @@ const Header = () => (
       exact
       to='/test4'
       >
-      Reservations
+      Menu | Reservations
     </LinkItem>
     <LinkItem
       exact
